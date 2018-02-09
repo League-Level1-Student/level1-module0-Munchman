@@ -22,27 +22,33 @@ public class PhotoQuiz {
 		quizWindow.setVisible(true);
 
 		// 1. find an image on the internet, and put its URL in a String variable (from your browser, right click on the image, and select “Copy Image URL”)
-
+String penguin="http://b3ta.com/images/challenge/fluffy_biggy.jpg";
 		// 2. create a variable of type "Component" that will hold your image
-
+Component photo;
 		// 3. use the "createImage()" method below to initialize your Component
-
+photo=createImage(penguin);
 		// 4. add the image to the quiz window
-
+quizWindow.add(photo);
 		// 5. call the pack() method on the quiz window
-
+quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+String p = JOptionPane.showInputDialog("what is cute and black and whight?");
 		// 7. print "CORRECT" if the user gave the right answer
-
+if(p.equals("penguin")){
+	JOptionPane.showMessageDialog(null, "Correct!");
+	
+}
+else{
+	JOptionPane.showMessageDialog(null, "Wrong!");
+}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
-
+quizWindow.remove(photo);
 		// 10. find another image and create it (might take more than one line of code)
-
+String me="http://photos-images.active.com/file/1/5223722/optimized/f46f2c5d-1d7b-46c3-a49f-703a9ec987f8.jpg?v=1000";
 		// 11. add the second image to the quiz window
-
+photo=createImage(me);
 		// 12. pack the quiz window
 
 		// 13. ask another question
