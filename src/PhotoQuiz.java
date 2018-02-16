@@ -49,11 +49,19 @@ quizWindow.remove(photo);
 String me="http://photos-images.active.com/file/1/5223722/optimized/f46f2c5d-1d7b-46c3-a49f-703a9ec987f8.jpg?v=1000";
 		// 11. add the second image to the quiz window
 photo=createImage(me);
+quizWindow.add(photo);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+String potato = JOptionPane.showInputDialog("who dis awesome person?");
 		// 14+ check answer, say if correct or incorrect, etc.
+if(potato.equals("marc")) {
+	JOptionPane.showMessageDialog(null, "YEEEEEEET");
+}
+else {
+	JOptionPane.showMessageDialog(null, "NOPEEEEE");
+}
+quizWindow.dispose();
 
 	}
 
