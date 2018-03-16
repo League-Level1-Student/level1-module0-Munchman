@@ -32,9 +32,9 @@ frame.add(panel);
 		// 2. Make the frame visible
 frame.setVisible(true);
 		// 3. Set the text of the leftButton to "Click me!"
-leftButton.setText("click me if you think josh sucks!");
+leftButton.setText("click me!");
 		// 4. Set the text of the rightButton to "Click me!"
-rightButton.setText("click me if you think finn sucks");
+rightButton.setText("click me!");
 		// 5. Add an action listener to the leftButton
 leftButton.addActionListener(this);
 		// 6. Add an action listener to the rightButton
@@ -46,7 +46,7 @@ panel.add(rightButton);
 		// 9. Pack the frame
 frame.pack();
 		// 10. Set the title of the frame to "Demanding Buttons"
-frame.setTitle("Demanding Buttons");
+frame.setTitle("Dueling Buttons");
 	}
 
 	@Override
@@ -59,7 +59,19 @@ frame.setTitle("Demanding Buttons");
 			// Set the PREFERRED size of the rightButton to BIG
 			// Set the text of the leftButton to "Click Me!"
 			// Set the PREFERRED size of the leftButton to SMALL
+		if (buttonPressed==leftButton) {
+			rightButton.setText("No! click me!");
+			rightButton.setPreferredSize(BIG);
+			leftButton.setPreferredSize(SMALL);
+			leftButton.setText("click me!");
+		}
 		
+		else if (buttonPressed==rightButton) {
+			leftButton.setText("No! click me!");
+			leftButton.setPreferredSize(BIG);
+			rightButton.setPreferredSize(SMALL);
+			rightButton.setText("click me!");
+		}
 		
 		/* If the buttonPressed was the rightButton, do the opposite. */
 		
